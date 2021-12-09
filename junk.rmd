@@ -7,24 +7,98 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+
 ```
 
 ## R Markdown
+```{r}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+		
+		knitr::opts_chunk$set(
+		echo = TRUE,
+		eval = TRUE,
+		message = FALSE,
+		warning = FALSE, 
+		out.height = "100%",
+		out.width = "100%",
+		paged.print=TRUE, 
+		fig.show = "hold", 
+		cache = T
+		)		  
+					
+title: "POMALIDOMIDE BE STUDY PK SUMMARY"
+author: "yanli"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    theme: cosmo
+    highlight: tango
+    anchor_sections: yes
+    toc: yes
+    toc_float: yes
+    number_section: yes
+    code_folding: hide
+    code_download: yes
+				
+ 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+    
+    
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+```{r}
+
+
+library(Rcpp) 
+library(eoffice)
+library(usethis) 
+library(ggforce)
+library(widyr)
+library(corrr)
+library(tictoc)
+library(plotly)
+library(lubridate)
+library(stringr)
+library(ggthemes)
+library(extrafont)
+library(AER)
+library(tidyxl)
+library(ggstatsplot)
+library(ggcorrplot)
+library(ggside)
+library(stringi)
+library(progressr)
+library(skimr)
+library(knitr)
+library(usemodels)
+library(tidymodels)
+library(readr)
+library(readxl)
+library(ggplot2)  
+library(tidyr) 
+library(dplyr)
+library(purrr)
+library(broom)
+library(tidylog)
+library(tidyverse)
+library(janitor)
+library(haven)
+library(data.table)
+library(patchwork)
+library(furrr) 
+library(lme4)
+library(broom.mixed)
+library(rsample)
+library(lattice)
+library(rr2)
+library(kableExtra)
+library(rlang)
+ 
+ 
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
